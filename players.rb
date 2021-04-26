@@ -1,5 +1,5 @@
 class Players
-  def initialize(name, lives = 0)
+  def initialize(name, lives = 3)
     @name = name
     @lives = lives
   end
