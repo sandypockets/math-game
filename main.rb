@@ -16,11 +16,24 @@ puts "Thank you #{player2_name}."
 
 def remove_life(player)
   player.lives -= 1
-  puts player.lives
 end
 
 def output_score
   puts "--- #{@player1.name}: #{@player1.lives}/3 vs #{@player2.name}: #{@player2.lives}/3 ---"
+end
+
+def win_message(player)
+  puts "#{player.name} wins, with #{player.lives} life remaining!"
+end
+
+def end_game
+  if @player1.still_alive?
+    win_message(@player1)
+    puts 'Goodbye'
+  elsif @player2.still_alive?
+    win_message(@player2)
+    puts 'Goodbye'
+  end
 end
 
 def check_answer(user_input, current_question, player)
@@ -29,9 +42,7 @@ def check_answer(user_input, current_question, player)
     puts 'You got it right!'
   else
     puts 'Incorrect!'
-    ## Remove a life from the player
     remove_life(player)
-    puts player.lives
   end
 end
 
@@ -45,16 +56,16 @@ def ask_question(player)
 end
 
 def ask_question_to_each_player
+  puts '--- NEW TURN ---'
   ## Player 1
   ask_question(@player1)
   ## Player 2
   ask_question(@player2)
-  puts '--- NEW ROUND ---'
 end
 
 # Run the game as long as both players are still alive
 ask_question_to_each_player while @player1.still_alive? && @player2.still_alive?
-
+end_game
 
 
 
