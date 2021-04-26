@@ -19,7 +19,7 @@ def remove_life(player)
 end
 
 def output_score
-  puts "--- #{@player1.name}: #{@player1.lives}/3 vs #{@player2.name}: #{@player2.lives}/3 ---"
+  puts "------ #{@player1.name}: #{@player1.lives}/3 vs #{@player2.name}: #{@player2.lives}/3 ------"
 end
 
 def win_message(player)
@@ -33,6 +33,8 @@ def end_game
   elsif @player2.still_alive?
     win_message(@player2)
     puts 'Goodbye'
+  else
+    puts 'The game is a tie!'
   end
 end
 
@@ -56,7 +58,7 @@ def ask_question(player)
 end
 
 def ask_question_to_each_player
-  puts '--- NEW TURN ---'
+  puts '------ NEW TURN ------'
   ## Player 1
   ask_question(@player1)
   ## Player 2
