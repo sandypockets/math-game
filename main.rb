@@ -14,6 +14,18 @@ puts "Thank you #{player2_name}."
 player1 = Players.new(player1_name)
 player2 = Players.new(player2_name)
 
+# First question
+question = Questions.new
+puts question.question
+user_answer = gets.chomp
+
+# Convert question.answer to string to match user input then check answers
+if user_answer == question.answer.to_s
+  puts 'You got it right!'
+else
+  puts 'Incorrect!'
+end
+
 # Testing/Debugging
 puts player1.name
 puts player2.name
