@@ -37,6 +37,11 @@ PLAYER 1 wins, with 1 life remaining!
 Goodbye
 ```
 
+## Getting Started
+
+1. Clone the repo to your local machine.
+2. Run `ruby main.rb` from the `math-game` directory.
+
 ## Purpose of this project
 This project was created to gain familiarity with Ruby classes. The two classes used for this project are `Players` and `Questions`. The game's state is managed in the `Players` class instance, via the amount of lives each player has remaining. 
 
