@@ -43,7 +43,7 @@ Goodbye
 2. Run `ruby main.rb` from the `math-game` directory.
 
 ## Purpose of this project
-This project was created to gain familiarity with Ruby classes. The two classes used for this project are `Players` and `Questions`. The game's state is managed in the `Players` class instance, via the amount of lives each player has remaining. 
+This project was created to gain familiarity with OOP and classes in Ruby. The two classes used for this project are `Players` and `Questions`. The game's state is managed in the `Players` class instance, via the amount of lives each player has remaining. 
 
 ## Project Roadmap
 Stretch features to be implemented at a later date:
